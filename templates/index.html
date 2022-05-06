@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-US" >
+  <head>
+    <title>QRCode Generator</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Stuff -->
+    <meta name="description" content="Convert your texts into mp3 audios." />
+    <meta name="keywords" content="text to speech, tts, text to speech free, text to speech online, free text to speech" />
+    <meta name="googlebot" content="index, follow" />
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Text to Speech" />
+    <meta property="og:description" content="Convert your texts into mp3 audios." />
+    <meta property="og:image" content="/static/icon.png" />
+
+    <link rel="stylesheet" type="text/css" href="/static/style.css" />
+    <link rel="icon" type="image/png" href="/static/icon.png" />
+  </head>
+  <body>
+    <form method="post" action="/download"  class="form" autocomplete="off" enctype="multipart/form-data" >
+      <div class="title center">Text to Speech</div>
+      <div class="subtitle">Powered by Google TTS Engine</div>
+      
+      <!-- Text to convert -->
+      <div class="input-container ic1">
+        <textarea id="text" class="input" type="text" placeholder=" " name="text" autocomplete="off" required ></textarea>
+        <div class="cut cut-short"></div>
+        <label for="text" class="placeholder">Text</label>
+      </div>
+      
+      <!-- Language -->
+      <div class="input-container ic2">
+        <input id="lang" class="input" type="text" placeholder=" " name="lang"
+        pattern="[a-z][a-z]" title="Two letter language code. e.g. en" />
+        <div class="cut"></div>
+        <label for="lang" class="placeholder">Language</label>
+      </div>
+      
+      <button type="submit" class="submit">Convert</button>
+    </form>
+    
+    <script type="text/javascript" src="static/script.js"></script>
+  </body>
+</html>
